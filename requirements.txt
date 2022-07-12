@@ -1,0 +1,5 @@
+matplotlib==3.3.3
+numpy==1.21.2
+Pillow~=9.0.1
+scipy==1.7.3
+tsp-solver==0.1
