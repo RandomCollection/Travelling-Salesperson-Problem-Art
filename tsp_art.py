@@ -1,4 +1,4 @@
-# MODULE:       tsp_art.py
+# MODULE:       travelling_salesperson_problem_art.py
 # VERSION:      1.0
 # DIRECTORY:    <masked>
 # DATE:         2022-07-12
@@ -41,7 +41,7 @@ def show_image(img: Image.Image, coordinates: np.array, plot_type: str, save: st
 
 # MAIN FUNCTION ########################################################################################################
 
-def tsp_art():
+def travelling_salesperson_problem_art():
 	# GET REPOSITORIES -------------------------------------------------------------------------------------------------
 
 	repository_in = input(r"Enter the repository of the image including name and type such as 'C:\...\image_in.png':")
@@ -56,7 +56,7 @@ def tsp_art():
 	img_bw = img.convert(mode="1", dither=Image.NONE)
 	img_bw_array = np.array(img_bw, dtype=int)
 	black_indices = np.argwhere(a=img_bw_array == 0)
-	chosen_black_indices = black_indices[np.random.choice(a=black_indices.shape[0], size=1_000, replace=False)]
+	chosen_black_indices = black_indices[np.random.choice(a=black_indices.shape[0], size=8_000, replace=False)]
 	show_image(img=img, coordinates=chosen_black_indices, plot_type="scatter")
 	distances = pdist(X=chosen_black_indices)
 	distance_matrix = squareform(X=distances)
@@ -71,6 +71,6 @@ def tsp_art():
 # MAIN #################################################################################################################
 
 if __name__ == "__main__":
-	tsp_art()
+	travelling_salesperson_problem_art()
 
 # END ##################################################################################################################
