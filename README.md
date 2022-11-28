@@ -8,7 +8,9 @@ Travelling Salesperson Problem (TSP) art inspired by
 
 ## What it does
 
+<p align="center">
 <img src="img/img_0.png" width="150"> <img src="img/img_1.png" width="150"> <img src="img/img_2.png" width="150"> <img src="img/img_3.png" width="150">
+</p>
 
 ## License
 
